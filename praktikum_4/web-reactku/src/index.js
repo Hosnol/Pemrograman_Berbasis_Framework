@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css'; // import bootstrap
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import BlogPost from './container/BlogPost/BlogPost';
+import BlogPost from './container/BlogPost/BlogPost'; // import BlogPost
 
-ReactDOM.render(<BlogPost/>, document.getElementById('root'));
+//ReactDOM.render(<BlogPost/>, document.getElementById('root')); // render BlogPost dengan Id Root
+
+ReactDOM.render(<BlogPost/>, document.getElementById('content')); // render BlogPost dengan Id content
 
 // ReactDOM.render(
 //   <React.StrictMode>
