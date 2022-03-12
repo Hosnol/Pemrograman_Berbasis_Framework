@@ -57,7 +57,7 @@ class BlogPost extends Component{
     }
 
     componentDidMount(){   // fungsi yang akan dijalankan ketika component telah di mount
-        fetch('http://jsonplaceholder.typicode.com/posts') // alamat URL API yang akan di ambil
+        fetch('http://localhost:3001/posts') // alamat URL API yang akan di ambil
         .then(response => response.json()) // response dari API dalam bentuk JSON
         .then(json => {
             this.setState({
