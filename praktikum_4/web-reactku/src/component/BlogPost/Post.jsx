@@ -9,6 +9,8 @@ const Post = (props) => {
             <div className="konten-artikel">
                 <div className="judul-artikel">{props.judul}</div>
                     <p className="isi-artikle">{props.isi}</p>
+                    {/* button untuk menghapus data */}
+                    <button className="btn btn-sm btn-danger" onClick={() =>props.hapusArtikel(props.idArtikel)}>Hapus</button>
                 </div>
         </div>
     );
