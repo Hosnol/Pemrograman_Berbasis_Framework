@@ -1,0 +1,12 @@
+{
+  "products": [
+    {"id": 1, "name": "Apple iPhone 8","price": "Rp 3.368.000", "quantity": 0},
+    {"id": 2, "name": "Apple iPhone 8 Plus","price": "Rp 12.300.000", "quantity": 0},
+    {"id": 3, "name": "Apple iPhone X", "price": "Rp 8.800.000","quantity": 0},
+    {"id": 4,"name": "Apple iPhone 11 Pro","price": "Rp 12.399.000", "quantity": 0}
+  ],
+  "users": [
+    { "id": 1, "email": "test@gmail.com", "passwprd": "123"},
+    { "id": 2, "email": "test2@gmail.com", "passwprd": "123"}
+  ]
+}
