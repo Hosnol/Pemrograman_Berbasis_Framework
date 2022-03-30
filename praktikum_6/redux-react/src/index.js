@@ -5,6 +5,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import MainReducer from './reducers/MainReducer';
 import './index.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import CreateTodo from './containers/CreateTodo';
 import Table from './containers/Table';
 import reportWebVitals from './reportWebVitals';
