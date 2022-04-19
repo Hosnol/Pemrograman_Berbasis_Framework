@@ -55,6 +55,7 @@ export default class DaftarProduct extends Component {
           axios
             .post("http://localhost:3002/keranjangs", keranjang)
             .then((res) => {
+              this.getListKeranjang();
               swal({
                 title: "Sukses",
                 text: "Produk" + value.nama + " Berhasil Masuk Keranjang",
