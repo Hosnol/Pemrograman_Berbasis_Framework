@@ -6,11 +6,12 @@ import 'bootstrap/dist/css/bootstrap.css'; // import bootstrap
 import reportWebVitals from './reportWebVitals';
 
 import BlogPost from './container/BlogPost/BlogPost'; // import BlogPost
+import Mahasiswa from './container/Mahasiswa/Mahasiswa'; // import Mahasiswa
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BlogPost />
+    <Mahasiswa />
   </React.StrictMode>
 );
 
