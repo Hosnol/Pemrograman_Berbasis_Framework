@@ -47,7 +47,7 @@ class BlogPost extends Component {
 
     // tombol simpan
     handleTombolSimpan = () => {  //fungsi untuk menghandle tombol simpan
-        API.postNewBlog(this.state.InsertArtikel) // mengirim data ke API
+        API.postNewsBlog(this.state.InsertArtikel) // mengirim data ke API
             .then((res) => { // response dari API dalam bentuk JSON
                 this.ambilDataDariServerAPI() // ambil data dari server API
             })
