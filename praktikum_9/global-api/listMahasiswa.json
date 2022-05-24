@@ -12,21 +12,21 @@
     },
     {
       "userId": 1,
-      "id": 1,
-      "nim": "1941720025",
-      "nama": "Joko",
-      "alamat": "Jl Senggani",
-      "hp": "085444301755",
-      "angkatan": "2019",
-      "status": "aktif"
-    },
-    {
-      "userId": 1,
       "id": 1647157634864,
       "nim": "1942720221",
       "nama": "Rania",
       "alamat": "Jl Bunga tulip",
       "hp": "082366910654",
+      "angkatan": "2019",
+      "status": "aktif"
+    },
+    {
+      "userId": 1,
+      "id": 1651023247884,
+      "nim": "1942720011",
+      "nama": "ronal",
+      "alamat": "Jl kembang turi",
+      "hp": "085134994255",
       "angkatan": "2019",
       "status": "aktif"
     }

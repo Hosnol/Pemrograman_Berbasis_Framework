@@ -101,6 +101,78 @@
         }
       ],
       "id": 1
+    },
+    {
+      "total_bayar": 8600000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 5000000,
+          "product": {
+            "id": 1,
+            "nama": "Mesin Cuci Electrolux",
+            "harga": 5000000,
+            "img": "./img/mesin-cuci-electrolux.jpg",
+            "stok": 10
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 2,
+          "total_harga": 2400000,
+          "product": {
+            "id": 3,
+            "nama": "Mesin Cuci LG",
+            "harga": 1200000,
+            "img": "/img/mesin-cuci-lg.jpg",
+            "stok": 10
+          },
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 1200000,
+          "product": {
+            "id": 4,
+            "nama": "Mesin Cuci Sanyo",
+            "harga": 1200000,
+            "img": "./img/mesin-cuci-sanyo.jpg",
+            "stok": 10
+          },
+          "id": 3
+        }
+      ],
+      "id": 2
+    },
+    {
+      "total_bayar": 2400000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 1200000,
+          "product": {
+            "id": 3,
+            "nama": "Mesin Cuci LG",
+            "harga": 1200000,
+            "img": "/img/mesin-cuci-lg.jpg",
+            "stok": 10
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 1200000,
+          "product": {
+            "id": 4,
+            "nama": "Mesin Cuci Sanyo",
+            "harga": 1200000,
+            "img": "./img/mesin-cuci-sanyo.jpg",
+            "stok": 10
+          },
+          "id": 2
+        }
+      ],
+      "id": 3
     }
   ]
 }
