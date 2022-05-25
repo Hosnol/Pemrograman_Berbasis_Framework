@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.css'; // import bootstrap
 import reportWebVitals from './reportWebVitals';
+import BlogPost from './container/BlogPost/BlogPost'; // import BlogPost
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    < BlogPost/>
   </React.StrictMode>
 );
 
