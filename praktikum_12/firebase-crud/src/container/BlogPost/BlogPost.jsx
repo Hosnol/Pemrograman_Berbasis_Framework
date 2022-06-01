@@ -8,7 +8,7 @@ import 'firebase/compat/database';
 
 class BlogPost extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         firebase.initializeApp(firebaseConfig); // inisialisasi firebase
 
         this.state = {          // inisialisasi state dari react statefull component
@@ -34,6 +34,12 @@ class BlogPost extends Component {
         this.ambilDataDariServerAPI() // ambil data dari server API lokal
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState !== this.state) {
+            this.simpanDataKeServerAPI();
+        }
+    }
+
     // handle delete button
     handleHapusArtikel = (idArtikel) => { // fungsi yang akan di panggil ketika tombol hapus di klik
         const { listArtikel } = this.state; // mengambil data dari state
@@ -44,7 +50,7 @@ class BlogPost extends Component {
     }
 
     // handle insert button
-    handleTombolSimpan = () => { // fungsi yang akan di panggil ketika tombol tambah di klik
+    handleTombolSimpan = (event) => { // fungsi yang akan di panggil ketika tombol tambah di klik
         let title = this.refs.judulArtikel.value; // mengambil value dari inputan judul
         let body = this.refs.isiArtikel.value; // mengambil value dari inputan isi
         let uid = this.refs.uid.value; // mengambil value dari inputan uid
@@ -106,7 +112,7 @@ class BlogPost extends Component {
                     <h2> Daftar Artikel </h2>
                     {
                         this.state.listArtikel.map(artikel => { // looping data dari API
-                            return <Post key={artikel.id} judul={artikel.title} isi={artikel.body} hapusArtikel={this.handleHapusArtikel} idArtikel={artikel.uid} />
+                            return <Post key={artikel.uid} judul={artikel.title} isi={artikel.body} hapusArtikel={this.handleHapusArtikel} idArtikel={artikel.uid} />
                         })
                     }
                 </div>
