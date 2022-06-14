@@ -40,15 +40,19 @@ const CartContainer = () => {
   const saveDetails = () => {
     try {
       let data = {};
-      cartItems.map((item) => (
+      let iditems = "";
+      let qtyitems = "";
+      cartItems.map(function (item) {
+        iditems += item.id + ","
+        qtyitems += item.qty + ","
         data = {
           id: `${Date.now()}`,
-          idItem: item.id,
-          qty: item.qty,
+          idItem: iditems,
+          qty: qtyitems,
           total: tot
         }
-      ))
-      saveCheckout(user.uid + `${Date.now()}`, data)
+    })
+      saveCheckout(user.uid + "," + `${Date.now()}`, data)
       clearCart();
     } catch (error) {
       console.log(error);
