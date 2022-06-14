@@ -4,11 +4,14 @@ import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 import EmptyCart from "../img/emptyCart.svg";
 import CartItem from "./CartItem";
+import { saveCheckout } from "../utils/firebaseFunctions";
 
 const CartContainer = () => {
   const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
   const [flag, setFlag] = useState(1);
   const [tot, setTot] = useState(0);
+  const [alertStatus, setAlertStatus] = useState("danger");
+  const [msg, setMsg] = useState(null);
 
   const showCart = () => {
     dispatch({
@@ -33,6 +36,24 @@ const CartContainer = () => {
 
     localStorage.setItem("cartItems", JSON.stringify([]));
   };
+
+  const saveDetails = () => {
+    try {
+      let data = {};
+      cartItems.map((item) => (
+        data = {
+          id: `${Date.now()}`,
+          idItem: item.id,
+          qty: item.qty,
+          total: tot
+        }
+      ))
+      saveCheckout(user.uid + `${Date.now()}`, data)
+      clearCart();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="fixed top-0 right-0 w-full md:w-375 h-screen bg-white drop-shadow-md flex flex-col z-[101]">
@@ -92,6 +113,7 @@ const CartContainer = () => {
               <button
                 type="button"
                 className="w-full p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg"
+                onClick={saveDetails}
               >
                 Check Out
               </button>

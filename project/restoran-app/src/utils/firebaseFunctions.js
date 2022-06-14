@@ -31,3 +31,9 @@ import {
   
     return items.docs.map((doc) => doc.data());
   };
+
+  export const saveCheckout = async (userid, data) => {
+    await setDoc(doc(firestore, "checkoutItems", userid), data, {
+      merge: true,
+    });
+  };

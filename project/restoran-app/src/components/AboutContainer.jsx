@@ -28,7 +28,7 @@ const AboutContainer = () => {
             <section className="w-full my-6">
                 <RowAboutContainer
                     scrollValue={scrollValue}
-                    flag={true}
+                    flag={false}
                     data={memberItems}
                 />
                 {/* {cartShow && <CartContainer />} */}
