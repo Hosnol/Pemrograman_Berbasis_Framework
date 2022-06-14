@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Header, CreateContainer, MainContainer } from './components'
+import { Header, CreateContainer, MainContainer, MenuContainer, AboutContainer } from './components'
 import { Route, Routes } from 'react-router-dom'
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
@@ -29,6 +29,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={ <MainContainer /> } />
           <Route path='/createItems' element={ <CreateContainer/> } />
+          <Route path='/menu' element={<MenuContainer/>}/>
+          <Route path='/about' element={<AboutContainer/>}/>
         </Routes>
       </main>
     </div>

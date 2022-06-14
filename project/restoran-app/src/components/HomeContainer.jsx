@@ -2,7 +2,7 @@ import React from "react";
 import Delivery from '../img/delivery.png'
 import HeroBg from '../img/heroBg.png'
 import { heroData } from '../utils/data';
-
+import { Link } from "react-router-dom";
 
 
 const HomeContainer = () => {
@@ -40,7 +40,7 @@ const HomeContainer = () => {
                     w-full md:w-auto px-4 py-2 rounded-lg hover:shadow-lg transition-all ease-in-out 
                     duration-100'
                 >
-                    Pesan Sekarang
+                    <Link to={"/menu"}>Pesan Sekarang</Link>
                 </button>
             </div>
 
