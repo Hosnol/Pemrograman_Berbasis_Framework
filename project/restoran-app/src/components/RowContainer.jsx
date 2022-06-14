@@ -52,7 +52,16 @@ const RowContainer = ({ flag, data, scrollValue }) => {
                             </div>
                             <div
                                 className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
-                                onClick={() => setItems([...cartItems, item])}
+                                onClick={ 
+                                    function() {
+                                        const found = cartItems.find(obj => {
+                                            return obj.id === item.id;
+                                            });
+                                        if(!found){
+                                            setItems([...cartItems, item])
+                                        }
+                                    }
+                                }
                             >
                                 <MdAddShoppingCart className="text-white" />
                             </div>
