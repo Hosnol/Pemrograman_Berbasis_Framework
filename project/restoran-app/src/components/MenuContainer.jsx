@@ -6,7 +6,6 @@ import { MdFastfood } from "react-icons/md";
 
 const MenuContainer = () => {
     const [filter, setFilter] = useState("chicken");
-
     const [{ foodItems }, dispatch] = useStateValue();
 
     return (
@@ -33,8 +32,8 @@ const MenuContainer = () => {
                                 >
                                     <MdFastfood
                                         className={`${filter === category.urlParamName
-                                                ? "text-textColor"
-                                                : "text-white"
+                                            ? "text-textColor"
+                                            : "text-white"
                                             } group-hover:text-textColor text-lg`}
                                     />
                                 </div>

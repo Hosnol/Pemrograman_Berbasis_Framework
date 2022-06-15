@@ -23,3 +23,17 @@ import {
   
     return items.docs.map((doc) => doc.data());
   };
+
+  export const getAllMemberItems = async () => {
+    const items = await getDocs(
+      query(collection(firestore, "memberItems"), orderBy("id", "desc"))
+    );
+  
+    return items.docs.map((doc) => doc.data());
+  };
+
+  export const saveCheckout = async (userid, data) => {
+    await setDoc(doc(firestore, "checkoutItems", userid), data, {
+      merge: true,
+    });
+  };

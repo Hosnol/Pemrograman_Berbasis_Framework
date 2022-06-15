@@ -60,13 +60,13 @@ const Header = () => {
                 <div className="flex items-center gap-8">
                     <ul className="flex items-center gap-8 ml-auto">
                         <li className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                            Home
+                            <Link to={"/"}>Home</Link>
                         </li>
                         <li className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                            Menu
+                            <Link to={"/menu"}>Menu</Link>
                         </li>
                         <li className="text-base text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                            About Us
+                            <Link to={"/about"}>About Us</Link>
                         </li>
                     </ul>
 

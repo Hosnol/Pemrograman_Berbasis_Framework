@@ -1,13 +1,17 @@
-import React, { useEffect } from 'react'
-import { Header, CreateContainer, MainContainer } from './components'
+import React, { useEffect, useState } from 'react'
+import { Header, CreateContainer, MainContainer, MenuContainer, AboutContainer } from './components'
 import { Route, Routes } from 'react-router-dom'
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
+import CartContainer from './components/CartContainer';
 
 const App = () => {
-  const [{ foodItems }, dispatch] = useStateValue();
+  const [{ foodItems, cartShow }, dispatch] = useStateValue();
+  const [scrollValue, setScrollValue] = useState(0);
 
+  useEffect(() => { }, [scrollValue, cartShow]);
+  
   const fetchData = async () => {
     await getAllFoodItems().then((data) => {
       dispatch({
@@ -29,8 +33,11 @@ const App = () => {
         <Routes>
           <Route path='/' element={ <MainContainer /> } />
           <Route path='/createItems' element={ <CreateContainer/> } />
+          <Route path='/menu' element={<MenuContainer/>}/>
+          <Route path='/about' element={<AboutContainer/>}/>
         </Routes>
       </main>
+      {cartShow && <CartContainer />}
     </div>
   )
 }
